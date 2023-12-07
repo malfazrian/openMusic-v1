@@ -1,17 +1,17 @@
-const autoBind = require("auto-bind");
+const autoBind = require('auto-bind')
 
 class SongsHandler {
-  constructor(service, validator) {
-    this._service = service;
-    this._validator = validator;
+  constructor (service, validator) {
+    this._service = service
+    this._validator = validator
 
-    autoBind(this);
+    autoBind(this)
   }
 
-  async postSongsHandler(request, h) {
-    this._validator.validateSongPayload(request.payload);
+  async postSongsHandler (request, h) {
+    this._validator.validateSongPayload(request.payload)
     const { title, year, genre, performer, duration, albumId } =
-      request.payload;
+      request.payload
 
     const id = await this._service.addSong({
       title,
@@ -19,52 +19,52 @@ class SongsHandler {
       genre,
       performer,
       duration,
-      albumId,
-    });
+      albumId
+    })
 
     const response = h.response({
-      status: "success",
+      status: 'success',
       data: {
-        songId: id,
-      },
-    });
-    response.code(201);
-    return response;
+        songId: id
+      }
+    })
+    response.code(201)
+    return response
   }
 
-  async getSongsHandler(request) {
-    const { title, performer } = request.query;
+  async getSongsHandler (request) {
+    const { title, performer } = request.query
 
-    const songs = await this._service.getSongs(title, performer);
+    const songs = await this._service.getSongs(title, performer)
 
     return {
-      status: "success",
+      status: 'success',
       data: {
         songs: songs.map((song) => ({
           id: song.id,
           title: song.title,
-          performer: song.performer,
-        })),
-      },
-    };
+          performer: song.performer
+        }))
+      }
+    }
   }
 
-  async getSongByIdHandler(request) {
-    const { id } = request.params;
-    const song = await this._service.getSongById(id);
+  async getSongByIdHandler (request) {
+    const { id } = request.params
+    const song = await this._service.getSongById(id)
     return {
-      status: "success",
+      status: 'success',
       data: {
-        song,
-      },
-    };
+        song
+      }
+    }
   }
 
-  async putSongByIdHandler(request) {
-    this._validator.validateSongPayload(request.payload);
+  async putSongByIdHandler (request) {
+    this._validator.validateSongPayload(request.payload)
     const { title, year, genre, performer, duration, albumId } =
-      request.payload;
-    const { id } = request.params;
+      request.payload
+    const { id } = request.params
 
     await this._service.editSongById(id, {
       title,
@@ -72,24 +72,24 @@ class SongsHandler {
       genre,
       performer,
       duration,
-      albumId,
-    });
+      albumId
+    })
 
     return {
-      status: "success",
-      message: "Lagu berhasil diperbarui",
-    };
+      status: 'success',
+      message: 'Lagu berhasil diperbarui'
+    }
   }
 
-  async deleteSongByIdHandler(request) {
-    const { id } = request.params;
-    await this._service.deleteSongById(id);
+  async deleteSongByIdHandler (request) {
+    const { id } = request.params
+    await this._service.deleteSongById(id)
 
     return {
-      status: "success",
-      message: "Lagu berhasil dihapus",
-    };
+      status: 'success',
+      message: 'Lagu berhasil dihapus'
+    }
   }
 }
 
-module.exports = SongsHandler;
+module.exports = SongsHandler
