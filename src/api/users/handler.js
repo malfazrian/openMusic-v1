@@ -1,33 +1,33 @@
-const autoBind = require("auto-bind");
+const autoBind = require('auto-bind')
 
 class UsersHandler {
-  constructor(service, validator) {
-    this._service = service;
-    this._validator = validator;
+  constructor (service, validator) {
+    this._service = service
+    this._validator = validator
 
-    autoBind(this);
+    autoBind(this)
   }
 
-  async postUserHandler(request, h) {
-    this._validator.validateUserPayload(request.payload);
-    const { username, password, fullname } = request.payload;
+  async postUserHandler (request, h) {
+    this._validator.validateUserPayload(request.payload)
+    const { username, password, fullname } = request.payload
 
     const userId = await this._service.addUser({
       username,
       password,
-      fullname,
-    });
+      fullname
+    })
 
     const response = h.response({
-      status: "success",
-      message: "User berhasil ditambahkan",
+      status: 'success',
+      message: 'User berhasil ditambahkan',
       data: {
-        userId,
-      },
-    });
-    response.code(201);
-    return response;
+        userId
+      }
+    })
+    response.code(201)
+    return response
   }
 }
 
-module.exports = UsersHandler;
+module.exports = UsersHandler

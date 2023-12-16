@@ -1,12 +1,12 @@
 const routes = (handler) => [
   {
-    method: "GET",
-    path: "/playlists/{id}/activities",
+    method: 'GET',
+    path: '/playlists/{id}/activities',
     handler: handler.getPlaylistSongActivitiesHandler,
     options: {
-      auth: "openmusic_jwt",
-    },
-  },
-];
+      auth: 'openmusic_jwt'
+    }
+  }
+]
 
-module.exports = routes;
+module.exports = routes

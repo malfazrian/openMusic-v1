@@ -1,13 +1,13 @@
-const PlaylistSongActivitiesHandler = require("./handler");
-const routes = require("./routes");
+const PlaylistSongActivitiesHandler = require('./handler')
+const routes = require('./routes')
 
 module.exports = {
-  name: "playlistSongActivities",
-  version: "2.0.0",
+  name: 'playlistSongActivities',
+  version: '2.0.0',
   register: async (server, { service }) => {
     const playlistSongActivitiesHandler = new PlaylistSongActivitiesHandler(
       service
-    );
-    server.route(routes(playlistSongActivitiesHandler));
-  },
-};
+    )
+    server.route(routes(playlistSongActivitiesHandler))
+  }
+}

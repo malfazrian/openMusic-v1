@@ -1,57 +1,57 @@
-const autoBind = require("auto-bind");
+const autoBind = require('auto-bind')
 
 class PlaylistsHandler {
-  constructor(service, validator) {
-    this._service = service;
-    this._validator = validator;
+  constructor (service, validator) {
+    this._service = service
+    this._validator = validator
 
-    autoBind(this);
+    autoBind(this)
   }
 
-  async postPlaylistHandler(request, h) {
-    this._validator.validatePlaylistPayload(request.payload);
-    const { name } = request.payload;
-    const { id: credentialId } = request.auth.credentials;
+  async postPlaylistHandler (request, h) {
+    this._validator.validatePlaylistPayload(request.payload)
+    const { name } = request.payload
+    const { id: credentialId } = request.auth.credentials
 
     const playlistId = await this._service.addPlaylist({
       name,
-      owner: credentialId,
-    });
+      owner: credentialId
+    })
 
     const response = h.response({
-      status: "success",
-      message: "Playlist berhasil ditambahkan",
+      status: 'success',
+      message: 'Playlist berhasil ditambahkan',
       data: {
-        playlistId,
-      },
-    });
-    response.code(201);
-    return response;
+        playlistId
+      }
+    })
+    response.code(201)
+    return response
   }
 
-  async getPlaylistsHandler(request) {
-    const { id: credentialId } = request.auth.credentials;
-    const playlists = await this._service.getPlaylists(credentialId);
+  async getPlaylistsHandler (request) {
+    const { id: credentialId } = request.auth.credentials
+    const playlists = await this._service.getPlaylists(credentialId)
     return {
-      status: "success",
+      status: 'success',
       data: {
-        playlists,
-      },
-    };
+        playlists
+      }
+    }
   }
 
-  async deletePlaylistByIdHandler(request) {
-    const { id } = request.params;
-    const { id: credentialId } = request.auth.credentials;
+  async deletePlaylistByIdHandler (request) {
+    const { id } = request.params
+    const { id: credentialId } = request.auth.credentials
 
-    await this._service.verifyPlaylistOwner(id, credentialId);
-    await this._service.deletePlaylistById(id);
+    await this._service.verifyPlaylistOwner(id, credentialId)
+    await this._service.deletePlaylistById(id)
 
     return {
-      status: "success",
-      message: "Playlist berhasil dihapus",
-    };
+      status: 'success',
+      message: 'Playlist berhasil dihapus'
+    }
   }
 }
 
-module.exports = PlaylistsHandler;
+module.exports = PlaylistsHandler
