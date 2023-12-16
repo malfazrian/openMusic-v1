@@ -1,0 +1,77 @@
+{"level":"error","message":"Error adding playlist: id is not defined"}
+{"level":"error","message":"Error adding playlist: id is not defined"}
+{"level":"error","message":"Error getting playlist: id is not defined"}
+{"level":"error","message":"Error getting playlist: Playlist tidak ditemukan"}
+{"level":"error","message":"Error getting playlist: Playlist tidak ditemukan"}
+{"level":"error","message":"Error getting playlist: playlists is not defined"}
+{"error":{},"level":"error","message":"Error adding song to playlist: getSongById is not defined"}
+{"error":{},"level":"error","message":"Error adding song to playlist: Cannot read properties of undefined (reading 'getSongById')"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Lagu tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Lagu tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Lagu tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Lagu tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Lagu tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Lagu tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Lagu tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Lagu tidak ditemukan"}
+{"error":{},"level":"error","message":"Error adding song to playlist: Cannot access 'id' before initialization"}
+{"error":{},"level":"error","message":"Error adding song to playlist: songid is not defined"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Lagu tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Lagu tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Lagu tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Lagu tidak ditemukan"}
+{"error":{"code":"23505","constraint":"unique_playlist_id_and_song_id","detail":"Key (playlist_id, song_id)=(playlist-Wkhm7tn0bcSKXKBp, song-H_YXrUIY83HS67qF) already exists.","file":"nbtinsert.c","length":294,"line":"673","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","table":"playlist_songs"},"level":"error","message":"Error adding song to playlist: duplicate key value violates unique constraint \"unique_playlist_id_and_song_id\""}
+{"error":{"code":"23505","constraint":"unique_playlist_id_and_song_id","detail":"Key (playlist_id, song_id)=(playlist-Wkhm7tn0bcSKXKBp, song-H_YXrUIY83HS67qF) already exists.","file":"nbtinsert.c","length":294,"line":"673","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","table":"playlist_songs"},"level":"error","message":"Error adding song to playlist: duplicate key value violates unique constraint \"unique_playlist_id_and_song_id\""}
+{"error":{},"level":"error","message":"Error adding song to playlist: Cannot access 'playlistId' before initialization"}
+{"error":{},"level":"error","message":"Error adding song to playlist: this._service.verifyPlaylistAccess is not a function"}
+{"error":{},"level":"error","message":"Error adding song to playlist: this._service.verifyPlaylistAccess is not a function"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding song to playlist: Playlist tidak ditemukan"}
+{"error":{"code":"23505","constraint":"unique_playlist_id_and_song_id","detail":"Key (playlist_id, song_id)=(playlist-6nVbey18dmQWjnhR, song-_YQtPcVnDNV7eDhN) already exists.","file":"nbtinsert.c","length":294,"line":"673","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","table":"playlist_songs"},"level":"error","message":"Error adding song to playlist: duplicate key value violates unique constraint \"unique_playlist_id_and_song_id\""}
+{"error":{"code":"23505","constraint":"unique_playlist_id_and_song_id","detail":"Key (playlist_id, song_id)=(playlist-6nVbey18dmQWjnhR, song-_YQtPcVnDNV7eDhN) already exists.","file":"nbtinsert.c","length":294,"line":"673","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","table":"playlist_songs"},"level":"error","message":"Error adding song to playlist: duplicate key value violates unique constraint \"unique_playlist_id_and_song_id\""}
+{"error":{},"level":"error","message":"Error adding song to playlist: request is not defined"}
+{"error":{},"level":"error","message":"Error adding song to playlist: request is not defined"}
+{"error":{},"level":"error","message":"Error adding song to playlist: Cannot access 'id' before initialization"}
+{"error":{},"level":"error","message":"Error adding song to playlist: Cannot access 'id' before initialization"}
+{"error":{"name":"AuthorizationError","statusCode":403},"level":"error","message":"Error adding song to playlist: Anda tidak berhak mengakses resource ini"}
+{"error":{"name":"AuthorizationError","statusCode":403},"level":"error","message":"Error adding song to playlist: Anda tidak berhak mengakses resource ini"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error getting song of playlist: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error getting song of playlist: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error getting song of playlist: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error getting song of playlist: Playlist tidak ditemukan"}
+{"error":{"name":"AuthorizationError","statusCode":403},"level":"error","message":"Error getting song of playlist: Anda tidak berhak mengakses resource ini"}
+{"error":{"name":"AuthorizationError","statusCode":403},"level":"error","message":"Error getting song of playlist: Anda tidak berhak mengakses resource ini"}
+{"error":{"name":"AuthorizationError","statusCode":403},"level":"error","message":"Error getting song of playlist: Anda tidak berhak mengakses resource ini"}
+{"error":{"name":"AuthorizationError","statusCode":403},"level":"error","message":"Error getting song of playlist: Anda tidak berhak mengakses resource ini"}
+{"error":{},"level":"error","message":"Error getting song of playlist: this._service.deletePlaylistSongById is not a function"}
+{"error":{"name":"InvariantError","statusCode":400},"level":"error","message":"Error getting song of playlist: Lagu gagal dihapus dari playlist"}
+{"error":{},"level":"error","message":"Error adding collaboration: Cannot read properties of undefined (reading 'verifyPlaylistOwner')"}
+{"error":{},"level":"error","message":"Error adding collaboration: Cannot read properties of undefined (reading 'verifyPlaylistOwner')"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: User tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: User tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: Playlist tidak ditemukan"}
+{"error":{"name":"AuthorizationError","statusCode":403},"level":"error","message":"Error adding collaboration: Anda tidak berhak mengakses resource ini"}
+{"error":{},"level":"error","message":"Error adding collaboration: h is not defined"}
+{"error":{"code":"23505","constraint":"unique_playlist_id_and_user_id","detail":"Key (playlist_id, user_id)=(playlist-UUAzcbPlvj7PwYNs, user-jntFZ3DIJXD9a4xq) already exists.","file":"nbtinsert.c","length":294,"line":"673","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","table":"collaborations"},"level":"error","message":"Error adding collaboration: duplicate key value violates unique constraint \"unique_playlist_id_and_user_id\""}
+{"error":{"code":"23505","constraint":"unique_playlist_id_and_user_id","detail":"Key (playlist_id, user_id)=(playlist-UUAzcbPlvj7PwYNs, user-jntFZ3DIJXD9a4xq) already exists.","file":"nbtinsert.c","length":294,"line":"673","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","table":"collaborations"},"level":"error","message":"Error adding collaboration: duplicate key value violates unique constraint \"unique_playlist_id_and_user_id\""}
+{"error":{"name":"AuthorizationError","statusCode":403},"level":"error","message":"Error deleting collaboration: Anda tidak berhak mengakses resource ini"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: User tidak ditemukan"}
+{"error":{"name":"AuthorizationError","statusCode":403},"level":"error","message":"Error deleting collaboration: Anda tidak berhak mengakses resource ini"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: User tidak ditemukan"}
+{"error":{"name":"NotFoundError","statusCode":404},"level":"error","message":"Error adding collaboration: User tidak ditemukan"}
