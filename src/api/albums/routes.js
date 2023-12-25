@@ -25,7 +25,7 @@ const routes = (handler) => [
   },
   {
     method: "GET",
-    path: "/api/albums/file/images/{param*}", // Adjusted path pattern
+    path: "/api/albums/file/images/{param*}",
     handler: {
       directory: {
         path: path.resolve(__dirname, "file", "images"),

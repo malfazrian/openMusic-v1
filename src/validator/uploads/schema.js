@@ -11,9 +11,6 @@ const ImageHeadersSchema = Joi.object({
       "image/webp"
     )
     .required(),
-  _data: Joi.binary()
-    .max(512 * 1024)
-    .message("File size should be less than 512KB"),
 }).unknown();
 
 module.exports = { ImageHeadersSchema };

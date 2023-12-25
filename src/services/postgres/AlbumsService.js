@@ -33,7 +33,7 @@ class AlbumsService {
 
   async addCoverAlbum(id, url) {
     const query = {
-      text: "UPDATE albums SET cover_url = $1 WHERE id = $2 RETURNING id",
+      text: "UPDATE albums SET cover = $1 WHERE id = $2 RETURNING id",
       values: [url, id],
     };
 
@@ -46,6 +46,19 @@ class AlbumsService {
     }
 
     return result.rows[0].id;
+  }
+
+  writeFile(file, meta) {
+    const filename = +new Date() + meta.filename;
+    const path = `${this._folder}/${filename}`;
+
+    const fileStream = fs.createWriteStream(path);
+
+    return new Promise((resolve, reject) => {
+      fileStream.on("error", (error) => reject(error));
+      file.pipe(fileStream);
+      file.on("end", () => resolve(filename));
+    });
   }
 
   async getAlbumById(id) {
@@ -107,17 +120,17 @@ class AlbumsService {
     }
   }
 
-  writeFile(file, meta) {
-    const filename = +new Date() + meta.filename;
-    const path = `${this._folder}/${filename}`;
+  async verifyAlbumExist(id) {
+    const query = {
+      text: "SELECT * FROM albums WHERE id = $1",
+      values: [id],
+    };
 
-    const fileStream = fs.createWriteStream(path);
+    const result = await this._pool.query(query);
 
-    return new Promise((resolve, reject) => {
-      fileStream.on("error", (error) => reject(error));
-      file.pipe(fileStream);
-      file.on("end", () => resolve(filename));
-    });
+    if (!result.rows.length) {
+      throw new NotFoundError("Album tidak ditemukan");
+    }
   }
 }
 
