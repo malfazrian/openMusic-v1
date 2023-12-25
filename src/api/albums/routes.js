@@ -1,47 +1,47 @@
-const path = require("path");
+const path = require('path')
 
 const routes = (handler) => [
   {
-    method: "POST",
-    path: "/albums",
-    handler: handler.postAlbumsHandler,
+    method: 'POST',
+    path: '/albums',
+    handler: handler.postAlbumsHandler
   },
   {
-    method: "POST",
-    path: "/albums/{albumId}/covers",
+    method: 'POST',
+    path: '/albums/{albumId}/covers',
     handler: handler.postAlbumCoverHandler,
     options: {
       payload: {
-        allow: "multipart/form-data",
+        allow: 'multipart/form-data',
         multipart: true,
-        output: "stream",
-      },
-    },
+        output: 'stream'
+      }
+    }
   },
   {
-    method: "GET",
-    path: "/albums/{id}",
-    handler: handler.getAlbumByIdHandler,
+    method: 'GET',
+    path: '/albums/{id}',
+    handler: handler.getAlbumByIdHandler
   },
   {
-    method: "GET",
-    path: "/api/albums/file/images/{param*}",
+    method: 'GET',
+    path: '/api/albums/file/images/{param*}',
     handler: {
       directory: {
-        path: path.resolve(__dirname, "file", "images"),
-      },
-    },
+        path: path.resolve(__dirname, 'file', 'images')
+      }
+    }
   },
   {
-    method: "PUT",
-    path: "/albums/{id}",
-    handler: handler.putAlbumByIdHandler,
+    method: 'PUT',
+    path: '/albums/{id}',
+    handler: handler.putAlbumByIdHandler
   },
   {
-    method: "DELETE",
-    path: "/albums/{id}",
-    handler: handler.deleteAlbumByIdHandler,
-  },
-];
+    method: 'DELETE',
+    path: '/albums/{id}',
+    handler: handler.deleteAlbumByIdHandler
+  }
+]
 
-module.exports = routes;
+module.exports = routes

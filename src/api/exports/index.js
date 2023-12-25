@@ -1,9 +1,9 @@
-const ExportsHandler = require("./handler");
-const routes = require("./routes");
+const ExportsHandler = require('./handler')
+const routes = require('./routes')
 
 module.exports = {
-  name: "exports",
-  version: "3.0.0",
+  name: 'exports',
+  version: '3.0.0',
   register: async (
     server,
     { ProducerService, validator, playlistsService }
@@ -12,7 +12,7 @@ module.exports = {
       ProducerService,
       validator,
       playlistsService
-    );
-    server.route(routes(exportsHandler));
-  },
-};
+    )
+    server.route(routes(exportsHandler))
+  }
+}
